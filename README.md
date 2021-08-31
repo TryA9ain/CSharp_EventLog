@@ -32,5 +32,6 @@ SharpEventLog.exe -4624/-4625 -uniq
 execute-assembly C:\Users\Administrator\Desktop\CSharp_EventLog.exe -4624/-4625
 execute-assembly C:\Users\Administrator\Desktop\CSharp_EventLog.exe -4624/-4625 -uniq
 ```
+### 使用过程中遇到问题欢迎各位师傅们提交issues
 ## 参考链接
 https://github.com/uknowsec/SharpEventLog
