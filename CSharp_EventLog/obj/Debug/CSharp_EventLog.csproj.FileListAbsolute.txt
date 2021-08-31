@@ -1,0 +1,14 @@
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.exe
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.pdb
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.csproj.AssemblyReference.cache
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.csproj.CoreCompileInputs.cache
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.exe
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.pdb
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.exe
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.pdb
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.csproj.AssemblyReference.cache
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.csproj.CoreCompileInputs.cache
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.exe
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/obj/Debug/CSharp_EventLog.pdb
+C:/Users/Administrator/Desktop/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.exe.config
+/Users/tryagain/C#/CSharp_EventLog/CSharp_EventLog/bin/Debug/CSharp_EventLog.exe.config
