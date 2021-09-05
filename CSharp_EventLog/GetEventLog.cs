@@ -116,31 +116,24 @@ namespace CSharp_EventLog
 
             EventLog log = new EventLog("Security");  //读取 "安全日志"
 
-            IEnumerable<EventLogEntry> entries = log.Entries.Cast<EventLogEntry>().Where(x => x.InstanceId == 528);  //读取528日志
+            IEnumerable<EventLogEntry> entries = log.Entries.Cast<EventLogEntry>().Where(x => x.InstanceId == 528);  //读取528日志, windows2003 "528"日志代表用户成功登录到计算机
             foreach (EventLogEntry log1 in entries)
             {
                 string text = log1.Message;
-                string ipaddress = SelectContent.SelectEventLogContent(text, "源网络地址:	", "源端口:");
-                //string signInToProcess = SelectContent.SelectEventLogContent(text, "新登录:", "进程信息:");
-                string username = SelectContent.SelectEventLogContent(text, "用户名: 	", "域:");
-                // if (username == string.Empty)
-                // {
-                //     username = SelectContent.SelectEventLogContent(signInToProcess, "帐户名称:		", "帐户域:");
-                // }
-
-                string accountDomain = SelectContent.SelectEventLogContent(text, "调用方域:	", "调用方登录 ID:");
+                string ipaddress = SelectContent.SelectEventLogContent(text, "源网络地址:	", "源端口:");  //筛选ip
+                string username = SelectContent.SelectEventLogContent(text, "用户名: 	", "域:");  //筛选用户名
+                string accountDomain = SelectContent.SelectEventLogContent(text, "调用方域:	", "调用方登录 ID:");  //筛选域
 
                 DateTime time = log1.TimeGenerated;  //事件发生时间
 
                 if (ipaddress.Length >= 7)  //判断ip长度大于等于7则写入ip
                 {
-                    
+                    CreateFileWrite.WriteFile(file, "\r\n-----------------------------------");
 
                     //写入事件发生时间
                     CreateFileWrite.WriteFile(file, @"Time: " + time);
 
                     //写入账户名
-               
                     CreateFileWrite.WriteFile(file, "UserName: " + username.Replace("\n", "").Replace(" ", "").Replace("\t", "").Replace("\r", ""));
 
                     //写入域
