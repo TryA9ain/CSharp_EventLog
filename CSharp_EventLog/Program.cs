@@ -9,12 +9,13 @@ namespace CSharp_EventLog
             if (args.Length == 0 || args[0] == "-h")
             {
                 Console.WriteLine(@"Usage of CSharpEventLog.exe:
-    -4624:  Get Event Log For 4624
-    -4625:  Get Event Log For 4625
+    -4624:  Get Event Log For ID:4624
+    -4625:  Get Event Log For ID:4625
+    -win2003:  Get Event Log For Win2003 ID:528
     -uniq:  Remove Repeats results And Count the number of repetitions
 
-Example:  CSharpEventLog.exe -4624/-4625
-          CSharpEventLog.exe -4624/-4625 -uniq
+Example:  CSharpEventLog.exe -4624/-4625/-win2003
+          CSharpEventLog.exe -4624/-4625/-win2003 -uniq
 
 ");
             }
@@ -22,15 +23,21 @@ Example:  CSharpEventLog.exe -4624/-4625
             //调用4624, 默认只输出 "eventLogResults.txt", 不进行去重以及统计重复次数
             else if (args.Length == 1 && (args[0] == "-4624"))
             {
-                EventLog_4624_4625.EventLog_4624();
+                GetEventLog.EventLog_4624();
 
             }
             //调用4625, 默认只输出 "eventLogResults.txt", 不进行去重以及统计重复次数
             else if (args.Length == 1 && (args[0] == "-4625"))
             {
-                EventLog_4624_4625.EventLog_4625();
+                GetEventLog.EventLog_4625();
             }
-
+            //如果指定是win2003, 则调用528, 默认只输出 "eventLogResults.txt", 不进行去重以及统计重复次数
+            else if (args.Length == 1 && (args[0] == "-win2003"))
+            {
+                GetEventLog.Win2003EventLog();
+            }
+            
+            
             //调用4624, -o 允许指定输出全部结果的文件名
             //else if (args.Length == 3 && (args[0] == "-4624") && (args[1] == "-o"))
             //{
@@ -45,7 +52,7 @@ Example:  CSharpEventLog.exe -4624/-4625
             //调用4624, -uniq 进行去重, 默认输出 "eventLogResults.txt", "ips.txt", "names.txt", "numberOfOccurrences.txt" 四个文件
             else if (args.Length == 2 && (args[0] == "-4624") && (args[1] == "-uniq"))
             {
-                EventLog_4624_4625.EventLog_4624();
+                GetEventLog.EventLog_4624();
                 RemoveRepeat.RemoveRepeatIp();
                 CreateFileWrite.WriteFile("numberOfOccurrences.txt", "\r\n=================================================================\r\n");
                 RemoveRepeat.RemoveRepeatUserName();
@@ -55,7 +62,18 @@ Example:  CSharpEventLog.exe -4624/-4625
             //调用4625, -uniq 进行去重, 默认输出 "eventLogResults.txt", "ips.txt", "names.txt", "numberOfOccurrences.txt" 四个文件
             else if (args.Length == 2 && (args[0] == "-4625") && (args[1] == "-uniq"))
             {
-                EventLog_4624_4625.EventLog_4625();
+                GetEventLog.EventLog_4625();
+                RemoveRepeat.RemoveRepeatIp();
+                CreateFileWrite.WriteFile("numberOfOccurrences.txt", "\r\n=================================================================\r\n");
+                RemoveRepeat.RemoveRepeatUserName();
+                CreateFileWrite.WriteFile("numberOfOccurrences.txt", "\r\n=================================================================\r\n");
+                RemoveRepeat.RemoveRepeatAccountDomain();
+            }
+            
+            //如果指定是win2003, 则调用528, -uniq 进行去重, 默认输出 "eventLogResults.txt", "ips.txt", "names.txt", "numberOfOccurrences.txt" 四个文件
+            else if (args.Length == 2 && (args[0] == "-win2003") && (args[1] == "-uniq"))
+            {
+                GetEventLog.Win2003EventLog();
                 RemoveRepeat.RemoveRepeatIp();
                 CreateFileWrite.WriteFile("numberOfOccurrences.txt", "\r\n=================================================================\r\n");
                 RemoveRepeat.RemoveRepeatUserName();

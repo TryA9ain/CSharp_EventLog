@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{FBB8FE23-836D-4EDC-9F39-BC7C9D1F2BAA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CSharp_EventLog/GetEventLog.cs">
+    <Files>
+      <File FileName="CSharp_EventLog/RemoveRepeat.cs" Line="15" Column="13" />
+      <File FileName="CSharp_EventLog/GetEventLog.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CSharp_EventLog" expanded="True">
+            <Node name="CSharp_EventLog" expanded="True">
+              <Node name="GetEventLog.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CSharp__EventLog PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
